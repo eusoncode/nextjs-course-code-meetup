@@ -13,6 +13,7 @@ import MeetupDetails from '../../components/meetups/MeetupDetails';
 // };
 
 export default function MeetupDetail(props) {
+  console.log(props.meetupData);
   return (
     <MeetupDetails meetupData={props.meetupData} />
   );
