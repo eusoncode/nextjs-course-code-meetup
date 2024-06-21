@@ -1,5 +1,6 @@
 import MeetupDetails from '../../components/meetups/MeetupDetails';
 import { MongoClient, ObjectId } from 'mongodb';
+import Head from "next/head";
 
 
 // export default function MeetupDetail() {
@@ -16,7 +17,16 @@ import { MongoClient, ObjectId } from 'mongodb';
 export default function MeetupDetail(props) {
   console.log(props.meetupData);
   return (
-    <MeetupDetails meetupData={props.meetupData} />
+    <>
+      <Head>
+        <title>{props.meetupData.title}</title>
+        <meta
+          name='description'
+          content={props.meetupData.description}
+        />
+      </Head>
+      <MeetupDetails meetupData={props.meetupData} />
+    </>
   );
 };
 
