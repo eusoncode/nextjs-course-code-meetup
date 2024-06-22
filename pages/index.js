@@ -50,7 +50,7 @@ export async function getStaticProps() {
     address: meetup.address,
   }))
 
-  client.close();
+  client.close(); // Close connection
 
   return {
     props: {
